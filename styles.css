@@ -123,7 +123,7 @@ header {
 .methodology {
     background: rgba(255, 255, 255, 0.02);
     border-top: 1px solid var(--glass-border);
-    border-bottom: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);Vantage Core Logic
     padding: 3rem 2rem;
     margin: 4rem 0;
     border-radius: 4px;
@@ -201,6 +201,25 @@ footer {
     .grid {
         grid-template-columns: 1fr;
     }
+
+    .sub-branding {
+    margin: 1rem 0 2rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.pill {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent-primary);
+}
     
     .methodology p {
         font-size: 0.95rem;
