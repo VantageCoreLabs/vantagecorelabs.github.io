@@ -1,4 +1,4 @@
-# VantageCore Labs 🏛️
+# VantageCore Logic 🏛️
 
 **Operational Integrity through Software Excellence.**
 
