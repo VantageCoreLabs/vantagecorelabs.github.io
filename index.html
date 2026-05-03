@@ -28,6 +28,18 @@
             padding-top: 1rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem; /* You can adjust this to match your current spacing */
+        }
+        
+        .card {
+            flex: 1 1 300px; /* Allows cards to grow and shrink, with a 300px base */
+            max-width: 400px; /* Prevents the centered 4th card from stretching too wide */
+            /* Keep your existing card padding, background, and border rules here */
+        }
     </style>
 </head>
 <body>
@@ -99,10 +111,9 @@
             <p>Technical demonstrations of core system capabilities are available via secure, sandboxed environments upon request.</p>
             <a href="mailto:raymond@praxisappliedlogic.com" class="btn">Inquire for Access</a>
         </section>
-
         <footer>
             <div class="legal-disclaimer">
-                <p>Hardware configuration, custom software design, and network deployments provided by Praxis Applied Logic. Any physical installations are strictly minor and operate under the Arizona Handyman Exemption (Total project cost under $1,000 / No building permits required). Not a Licensed General Contractor.</p>
+                <p>Praxis Applied Logic provides hardware configuration, software design, and network integration. Minor physical installations currently operate under the state Handyman Exemption while our Arizona CR-67 (Dual Low Voltage) contractor license is pending. <em>*Not a Licensed Contractor.</em></p>
             </div>
             <p style="margin-top: 1rem;">&copy; 2026 Praxis Applied Logic | Arizona, USA</p>
         </footer>
