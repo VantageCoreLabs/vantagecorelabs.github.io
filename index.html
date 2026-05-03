@@ -23,7 +23,6 @@
             line-height: 1.6;
         }
 
-        /* Darkens background slightly to ensure text legibility */
         .background-overlay {
             position: fixed;
             top: 0;
@@ -35,7 +34,7 @@
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 4rem 2rem;
         }
@@ -89,9 +88,11 @@
             padding-bottom: 0.75rem;
         }
 
+        /* Flexbox ensures the cards stay centered for perfect symmetry */
         .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 2rem;
         }
 
@@ -100,7 +101,11 @@
             border: 1px solid var(--border-glow);
             padding: 2rem;
             border-radius: 4px;
+            flex: 1 1 300px; /* Base width of 300px */
+            max-width: 400px; /* Prevents cards from becoming too wide on large screens */
             transition: transform 0.3s ease;
+            box-sizing: border-box;
+            text-align: left; /* Keeps text professional while card container is centered */
         }
 
         .card:hover {
@@ -125,14 +130,15 @@
             margin-top: 6rem;
             text-align: center;
             background: var(--glass-bg);
-            padding: 3rem;
+            padding: 3.5rem;
             border-radius: 4px;
+            border: 1px solid var(--border-glow);
         }
 
         .btn {
             display: inline-block;
             margin-top: 2rem;
-            padding: 1rem 2rem;
+            padding: 1rem 2.5rem;
             background: #fff;
             color: #000;
             text-decoration: none;
@@ -140,11 +146,11 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             font-size: 0.8rem;
-            transition: opacity 0.3s ease;
+            transition: background 0.3s ease;
         }
 
         .btn:hover {
-            opacity: 0.8;
+            background: var(--accent-color);
         }
 
         footer {
@@ -162,6 +168,7 @@
 
         @media (max-width: 600px) {
             .logo-img { max-width: 240px; }
+            .methodology { padding: 2rem; }
         }
     </style>
 </head>
@@ -170,7 +177,7 @@
     
     <main class="container">
         <header>
-            <img src="PAL-Logo_500x500.png" alt="Praxis Applied Logic Logo" class="logo-img">
+            <img src="PAL- Logo_500x500.png" alt="Praxis Applied Logic Logo" class="logo-img">
             
             <div class="sub-branding">
                 <span class="pill">Systems Integration</span>
