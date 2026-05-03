@@ -7,65 +7,176 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* 1. Add the Background Image */
+        :root {
+            --accent-color: #a0a0a0;
+            --glass-bg: rgba(0, 0, 0, 0.7);
+            --border-glow: rgba(255, 255, 255, 0.1);
+        }
+
         body {
             margin: 0;
             padding: 0;
             background: url('PAL-Background_1600x900.png') no-repeat center center fixed;
             background-size: cover;
             font-family: 'Inter', sans-serif;
-            color: #fff; /* Ensuring text remains readable over a dark background */
+            color: #ffffff;
+            line-height: 1.6;
         }
 
-        /* Styling for the new logo image */
+        /* Darkens background slightly to ensure text legibility */
+        .background-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
         .logo-img {
-            max-width: 300px; /* Adjust this to fit your header scale */
+            max-width: 320px;
             height: auto;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .sub-branding {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .pill {
+            background: var(--glass-bg);
+            border: 1px solid var(--border-glow);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-color);
+        }
+
+        .tagline {
+            font-weight: 300;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            opacity: 0.9;
         }
 
         .service-category-title {
             text-align: center;
-            margin: 3rem 0 1.5rem 0;
+            margin: 4rem 0 2rem 0;
             font-weight: 300;
-            letter-spacing: 2px;
-            color: #a0a0a0;
+            letter-spacing: 3px;
+            color: var(--accent-color);
             text-transform: uppercase;
-            font-size: 0.9rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 0.5rem;
+            font-size: 0.85rem;
+            border-bottom: 1px solid var(--border-glow);
+            padding-bottom: 0.75rem;
         }
-        .legal-disclaimer {
-            font-size: 0.75rem;
-            color: #bbb; /* Lightened for better contrast on background */
-            text-align: center;
-            margin-top: 3rem;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
+
         .grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
+
         .card {
-            flex: 1 1 300px;
-            max-width: 400px;
-            background: rgba(0, 0, 0, 0.6); /* Added slight dark tint for card readability */
-            padding: 1.5rem;
-            border-radius: 8px;
+            background: var(--glass-bg);
+            border: 1px solid var(--border-glow);
+            padding: 2rem;
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            font-weight: 300;
+        }
+
+        .methodology {
+            margin-top: 6rem;
+            text-align: center;
+            background: var(--glass-bg);
+            padding: 3rem;
+            border-radius: 4px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background: #fff;
+            color: #000;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        footer {
+            margin-top: 6rem;
+            text-align: center;
+        }
+
+        .legal-disclaimer {
+            font-size: 0.75rem;
+            color: #888;
+            max-width: 700px;
+            margin: 0 auto 2rem auto;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 600px) {
+            .logo-img { max-width: 240px; }
         }
     </style>
 </head>
 <body>
-    <div class="background-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); z-index: -1;"></div>
+    <div class="background-overlay"></div>
     
     <main class="container">
-        <header style="text-align: center; padding-top: 2rem;">
-            <img src="PAL- Logo_500x500.png" alt="Praxis Applied Logic Logo" class="logo-img">
+        <header>
+            <img src="PAL-Logo_500x500.png" alt="Praxis Applied Logic Logo" class="logo-img">
             
-
+            <div class="sub-branding">
+                <span class="pill">Systems Integration</span>
+                <span class="pill">Custom Hardware</span>
+                <span class="pill">Network Architecture</span>
+            </div>
             <p class="tagline">Engineering the intelligence behind physical infrastructure.</p>
         </header>
 
@@ -73,22 +184,22 @@
         <section class="grid">
             <div class="card">
                 <h3>Automation & Logic Control</h3>
-                <p>Bridging fragmented hardware through custom-engineered communication logic. Specializing in bridging industrial protocols including CAN, MQTT, and Modbus for real-time diagnostics.</p>
+                <p>Bridging fragmented hardware through custom-engineered communication logic. We specialize in harmonizing standard messaging protocols for real-time edge diagnostics and system transparency.</p>
             </div>
 
             <div class="card">
-                <h3>Polyglot Engineering & DB</h3>
-                <p>Architecting resilient software solutions and CMMS backends using Python, C++, and PostgreSQL across Linux and embedded platforms to automate complex industrial workflows.</p>
+                <h3>Full-Stack Systems Architecture</h3>
+                <p>Architecting resilient software solutions and facility management backends. We leverage modern embedded languages and robust database schemas to automate complex industrial workflows.</p>
             </div>
 
             <div class="card">
                 <h3>Custom Hardware Fabrication</h3>
-                <p>End-to-end design and rapid deployment of bespoke sensor arrays, relay controllers, and custom 3D-printed enclosures for specialized physical environments.</p>
+                <p>End-to-end design and rapid deployment of bespoke sensor arrays, relay controllers, and specialized enclosures designed for demanding physical environments.</p>
             </div>
 
             <div class="card">
                 <h3>Operational Security</h3>
-                <p>Audit and implementation of privacy-first protocols, ensuring institutional knowledge, custom IP, and critical network assets remain shielded from external threats.</p>
+                <p>Audit and implementation of privacy-first protocols, ensuring institutional knowledge, custom IP, and critical assets remain shielded from external threats.</p>
             </div>
         </section>
 
@@ -96,32 +207,28 @@
         <section class="grid">
             <div class="card">
                 <h3>Advanced Home Networking</h3>
-                <p>Enterprise-grade network stability deployed for residential environments. Specializing in prosumer Wi-Fi mesh optimization, dead-zone elimination, and local Network Attached Storage (NAS) builds.</p>
+                <p>Enterprise-grade network stability for high-demand residential environments. Focused on optimized wireless distribution, high-speed backbone architecture, and localized storage solutions.</p>
             </div>
 
             <div class="card">
                 <h3>Smart Home Unification</h3>
-                <p>Bringing disparate IoT devices into a single, secure dashboard. Local-control deployments (Home Assistant on embedded Linux) to ensure your home runs without reliance on external cloud servers.</p>
+                <p>Consolidating disparate IoT devices into a single, secure interface. We prioritize local-control deployments to ensure operational autonomy without reliance on third-party cloud servers.</p>
             </div>
 
             <div class="card">
-                <h3>Plug-and-Play Security</h3>
-                <p>Configuration and localized network routing for wireless, battery-powered, and plug-in camera systems to monitor property securely without invasive structural modifications.</p>
+                <h3>Secured Visual Monitoring</h3>
+                <p>Deployment of localized network routing for comprehensive camera systems. We provide high-fidelity property monitoring without invasive structural modifications.</p>
             </div>
 
             <div class="card">
-                <h3>Digital Privacy Audits</h3>
-                <p>Network-wide ad-blocking (Pi-hole), local media server deployments, and comprehensive audits of home network vulnerabilities to protect family data.</p>
+                <h3>Digital Privacy & Governance</h3>
+                <p>Network-wide content filtering, local media server deployment, and comprehensive security audits to protect sensitive household data from the public web.</p>
             </div>
         </section>
 
-        <section class="methodology" style="margin-top: 4rem; text-align: center;">
+        <section class="methodology">
             <h2>Our Methodology</h2>
-            <p>Praxis Applied Logic applies a first-principles approach to every challenge. We deconstruct unknown communication logic to build lightweight, high-security interfaces tailored to your exact environment, whether that is an industrial facility or a modern home.</p>
-        </section>
-
-        <section class="cta-section" style="text-align: center; margin-bottom: 3rem;">
-            <p>Technical demonstrations of core system capabilities are available via secure, sandboxed environments upon request.</p>
+            <p>Praxis Applied Logic applies a first-principles approach to every challenge. We deconstruct unknown communication logic to build lightweight, high-security interfaces tailored to your exact environment—from industrial facilities to the modern home.</p>
             <a href="mailto:raymond@praxisappliedlogic.com" class="btn">Inquire for Access</a>
         </section>
 
@@ -129,7 +236,7 @@
             <div class="legal-disclaimer">
                 <p>Praxis Applied Logic provides hardware configuration, software design, and network integration. Minor physical installations currently operate under the state Handyman Exemption while our Arizona CR-67 (Dual Low Voltage) contractor license is pending. <em>*Not a Licensed Contractor.</em></p>
             </div>
-            <p style="margin-top: 1rem; text-align: center;">&copy; 2026 Praxis Applied Logic | Arizona, USA</p>
+            <p style="font-size: 0.8rem; opacity: 0.6;">&copy; 2026 Praxis Applied Logic | Arizona, USA</p>
         </footer>
     </main>
 </body>
