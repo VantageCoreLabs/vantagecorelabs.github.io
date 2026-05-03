@@ -6,6 +6,29 @@
     <title>Praxis Applied Logic | Systems Integration & Architecture</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* A small CSS addition to cleanly separate the new sections. 
+           You can move this into your styles.css file if you prefer. */
+        .service-category-title {
+            text-align: center;
+            margin: 3rem 0 1.5rem 0;
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: #a0a0a0; /* Adjust to match your theme */
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 0.5rem;
+        }
+        .legal-disclaimer {
+            font-size: 0.75rem;
+            color: #666;
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
 </head>
 <body>
     <div class="background-overlay"></div>
@@ -16,36 +39,60 @@
             <div class="sub-branding">
                 <span class="pill">Systems Integration</span>
                 <span class="pill">Custom Hardware</span>
-                <span class="pill">Industrial Interfaces</span>
+                <span class="pill">Network Architecture</span>
             </div>
             <p class="tagline">Engineering the intelligence behind physical infrastructure.</p>
         </header>
 
+        <h2 class="service-category-title">Commercial & Industrial Systems</h2>
         <section class="grid">
             <div class="card">
-                <h3>Systems Integration</h3>
-                <p>Bridging fragmented hardware and legacy environments through custom-engineered communication logic and real-time data pathways.</p>
+                <h3>Automation & Logic Control</h3>
+                <p>Bridging fragmented hardware through custom-engineered communication logic. Specializing in bridging industrial protocols including CAN, MQTT, and Modbus for real-time diagnostics.</p>
             </div>
 
             <div class="card">
-                <h3>Polyglot Engineering</h3>
-                <p>Architecting resilient, object-oriented software solutions across Linux and embedded platforms to automate complex industrial workflows.</p>
+                <h3>Polyglot Engineering & DB</h3>
+                <p>Architecting resilient software solutions and CMMS backends using Python, C++, and PostgreSQL across Linux and embedded platforms to automate complex industrial workflows.</p>
             </div>
 
             <div class="card">
-                <h3>Network Architecture</h3>
-                <p>Design and deployment of secure, localized IP environments and server-rack infrastructure optimized for 24/7 operational uptime.</p>
+                <h3>Custom Hardware Fabrication</h3>
+                <p>End-to-end design and rapid deployment of bespoke sensor arrays, relay controllers, and custom 3D-printed enclosures for specialized physical environments.</p>
             </div>
 
             <div class="card">
                 <h3>Operational Security</h3>
-                <p>Audit and implementation of privacy-first protocols, ensuring institutional knowledge and critical assets remain shielded from external threats.</p>
+                <p>Audit and implementation of privacy-first protocols, ensuring institutional knowledge, custom IP, and critical network assets remain shielded from external threats.</p>
             </div>
         </section>
 
-        <section class="methodology">
+        <h2 class="service-category-title">Residential & Prosumer IT</h2>
+        <section class="grid">
+            <div class="card">
+                <h3>Advanced Home Networking</h3>
+                <p>Enterprise-grade network stability deployed for residential environments. Specializing in prosumer Wi-Fi mesh optimization, dead-zone elimination, and local Network Attached Storage (NAS) builds.</p>
+            </div>
+
+            <div class="card">
+                <h3>Smart Home Unification</h3>
+                <p>Bringing disparate IoT devices into a single, secure dashboard. Local-control deployments (Home Assistant on embedded Linux) to ensure your home runs without reliance on external cloud servers.</p>
+            </div>
+
+            <div class="card">
+                <h3>Plug-and-Play Security</h3>
+                <p>Configuration and localized network routing for wireless, battery-powered, and plug-in camera systems to monitor property securely without invasive structural modifications.</p>
+            </div>
+
+            <div class="card">
+                <h3>Digital Privacy Audits</h3>
+                <p>Network-wide ad-blocking (Pi-hole), local media server deployments, and comprehensive audits of home network vulnerabilities to protect family data.</p>
+            </div>
+        </section>
+
+        <section class="methodology" style="margin-top: 4rem;">
             <h2>Our Methodology</h2>
-            <p>Praxis Applied Logic applies a first-principles approach to every challenge. We deconstruct unknown communication logic to build lightweight, high-security interfaces tailored to your specific physical infrastructure.</p>
+            <p>Praxis Applied Logic applies a first-principles approach to every challenge. We deconstruct unknown communication logic to build lightweight, high-security interfaces tailored to your exact environment, whether that is an industrial facility or a modern home.</p>
         </section>
 
         <section class="cta-section">
@@ -54,7 +101,10 @@
         </section>
 
         <footer>
-            <p>&copy; 2026 Praxis Applied Logic | Arizona, USA</p>
+            <div class="legal-disclaimer">
+                <p>Hardware configuration, custom software design, and network deployments provided by Praxis Applied Logic. Any physical installations are strictly minor and operate under the Arizona Handyman Exemption (Total project cost under $1,000 / No building permits required). Not a Licensed General Contractor.</p>
+            </div>
+            <p style="margin-top: 1rem;">&copy; 2026 Praxis Applied Logic | Arizona, USA</p>
         </footer>
     </main>
 </body>
