@@ -7,14 +7,29 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* A small CSS addition to cleanly separate the new sections. 
-           You can move this into your styles.css file if you prefer. */
+        /* 1. Add the Background Image */
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('PAL-Background_1600x900.png') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Inter', sans-serif;
+            color: #fff; /* Ensuring text remains readable over a dark background */
+        }
+
+        /* Styling for the new logo image */
+        .logo-img {
+            max-width: 300px; /* Adjust this to fit your header scale */
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
         .service-category-title {
             text-align: center;
             margin: 3rem 0 1.5rem 0;
             font-weight: 300;
             letter-spacing: 2px;
-            color: #a0a0a0; /* Adjust to match your theme */
+            color: #a0a0a0;
             text-transform: uppercase;
             font-size: 0.9rem;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -22,7 +37,7 @@
         }
         .legal-disclaimer {
             font-size: 0.75rem;
-            color: #666;
+            color: #bbb; /* Lightened for better contrast on background */
             text-align: center;
             margin-top: 3rem;
             padding-top: 1rem;
@@ -32,22 +47,24 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 2rem; /* You can adjust this to match your current spacing */
+            gap: 2rem;
         }
-        
         .card {
-            flex: 1 1 300px; /* Allows cards to grow and shrink, with a 300px base */
-            max-width: 400px; /* Prevents the centered 4th card from stretching too wide */
-            /* Keep your existing card padding, background, and border rules here */
+            flex: 1 1 300px;
+            max-width: 400px;
+            background: rgba(0, 0, 0, 0.6); /* Added slight dark tint for card readability */
+            padding: 1.5rem;
+            border-radius: 8px;
         }
     </style>
 </head>
 <body>
-    <div class="background-overlay"></div>
+    <div class="background-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); z-index: -1;"></div>
     
     <main class="container">
-        <header>
-            <h1 class="logo">PRAXIS<span> APPLIED</span> LOGIC</h1>
+        <header style="text-align: center; padding-top: 2rem;">
+            <img src="PAL-Logo_500x500.png" alt="Praxis Applied Logic Logo" class="logo-img">
+            
             <div class="sub-branding">
                 <span class="pill">Systems Integration</span>
                 <span class="pill">Custom Hardware</span>
@@ -102,20 +119,21 @@
             </div>
         </section>
 
-        <section class="methodology" style="margin-top: 4rem;">
+        <section class="methodology" style="margin-top: 4rem; text-align: center;">
             <h2>Our Methodology</h2>
             <p>Praxis Applied Logic applies a first-principles approach to every challenge. We deconstruct unknown communication logic to build lightweight, high-security interfaces tailored to your exact environment, whether that is an industrial facility or a modern home.</p>
         </section>
 
-        <section class="cta-section">
+        <section class="cta-section" style="text-align: center; margin-bottom: 3rem;">
             <p>Technical demonstrations of core system capabilities are available via secure, sandboxed environments upon request.</p>
             <a href="mailto:raymond@praxisappliedlogic.com" class="btn">Inquire for Access</a>
         </section>
+
         <footer>
             <div class="legal-disclaimer">
                 <p>Praxis Applied Logic provides hardware configuration, software design, and network integration. Minor physical installations currently operate under the state Handyman Exemption while our Arizona CR-67 (Dual Low Voltage) contractor license is pending. <em>*Not a Licensed Contractor.</em></p>
             </div>
-            <p style="margin-top: 1rem;">&copy; 2026 Praxis Applied Logic | Arizona, USA</p>
+            <p style="margin-top: 1rem; text-align: center;">&copy; 2026 Praxis Applied Logic | Arizona, USA</p>
         </footer>
     </main>
 </body>
